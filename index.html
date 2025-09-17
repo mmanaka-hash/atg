@@ -70,20 +70,7 @@
                 <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" class="hover:text-primary transition-colors">Sign in</a></li>
             </ul>
-            <button id="mobile-menu-button" class="md:hidden text-textDark focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
         </nav>
-        <div id="mobile-menu" class="hidden md:hidden absolute top-0 left-0 w-full h-full bg-cardBg z-40 transition-transform duration-300 transform -translate-x-full">
-            <div class="p-6 flex flex-col items-center space-y-4 pt-20">
-                <a href="#hero" class="text-textDark text-lg hover:text-primary transition-colors">Home</a>
-                <a href="#about" class="text-textDark text-lg hover:text-primary transition-colors">About Us</a>
-                <a href="#features" class="text-textDark text-lg hover:text-primary transition-colors">Services</a>
-                <a href="#pricing" class="text-textDark text-lg hover:text-primary transition-colors">Pricing</a>
-                <a href="#faq" class="text-textDark text-lg hover:text-primary transition-colors">FAQ</a>
-                <a href="#" class="bg-primary text-white font-semibold py-2 px-6 rounded-full w-full text-center hover:bg-blue-600 transition-colors">Sign in</a>
-            </div>
-        </div>
         <div id="hero" class="flex flex-col items-center text-center py-20 px-4">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 gradient-text">Innovating Tomorrow, Today.</h1>
             <p class="max-w-xl text-lg text-textGray mb-8">We are dedicated to providing cutting-edge technology solutions that drive business growth and efficiency.</p>
@@ -175,6 +162,45 @@
         </section>
 
         <section id="pricing" class="py-16 bg-gray-100">
+            <h2 class="text-4xl text-textDark font-bold text-center mb-12">Flexible Pricing for Every Scale</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center w-80 card-hover transition-all">
+                    <h3 class="text-textDark text-2xl font-bold mb-4">Basic</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">$9<span class="text-lg text-textGray">/month</span></p>
+                    <ul class="text-left mb-8 space-y-2 text-textGray">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Feature 1</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Feature 2</li>
+                        <li class="flex items-center opacity-50"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Feature 3</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-blue-600 transition-colors">Select Plan</button>
+                </div>
+
+                <div class="bg-cardBg p-8 rounded-xl border-2 border-primary text-center w-80 shadow-lg shadow-primary/50 card-hover transition-all relative">
+                    <span class="absolute top-0 right-0 mt-4 mr-4 px-3 py-1 bg-primary text-white text-xs font-bold rounded-full uppercase">Most Popular</span>
+                    <h3 class="text-textDark text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">$49<span class="text-lg text-textGray">/month</span></p>
+                    <ul class="text-left mb-8 space-y-2 text-textGray">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>All Basic features</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Advanced Analytics</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>24/7 Priority Support</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-blue-600 transition-colors">Select Plan</button>
+                </div>
+
+                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center w-80 card-hover transition-all">
+                    <h3 class="text-textDark text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">Contact Us</p>
+                    <ul class="text-left mb-8 space-y-2 text-textGray">
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>All Pro features</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Dedicated Account Manager</li>
+                        <li class="flex items-center"><svg class="w-4 h-4 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Custom Solutions</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-blue-600 transition-colors">Select Plan</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-16 bg-gray-100">
             <h2 class="text-4xl text-textDark font-bold text-center mb-12">Our 3-Step Approach</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center card-hover transition-all">
@@ -195,7 +221,7 @@
             </div>
         </section>
 
-        <section id="contact" class="py-16">
+        <section id="faq" class="py-16">
             <h2 class="text-4xl text-textDark font-bold text-center mb-12">TESTIMONIALS</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 <div class="bg-cardBg p-8 rounded-xl border border-gray-200 card-hover transition-all">
