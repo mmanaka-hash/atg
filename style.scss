@@ -1,121 +1,186 @@
-// Variables
-$primary-color: #4CAF50;
-$secondary-color: #222;
-$light-color: #fff;
-$font-stack: 'Roboto', sans-serif;
+// SCSS Variables
+$primary-color: #004c99; // Deep tech blue
+$secondary-color: #f0f0f5; // Off-white for backgrounds
+$accent-color: #4CAF50; // A vibrant green for accents
+$text-color: #333;
+$light-text-color: #fff;
+$spacing-unit: 2rem;
 
-// Global Styles
-body {
-  font-family: $font-stack;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  color: $secondary-color;
+// Basic Reset & Typography
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background-color: $secondary-color;
+    color: $text-color;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+h1, h2, h3 {
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+// Header
 header {
-  background: $primary-color;
-  color: $light-color;
-  text-align: center;
-  padding: 1rem;
+    background-color: $primary-color;
+    color: $light-text-color;
+    padding: $spacing-unit 0;
+    text-align: center;
 
-  .slogan {
-    margin: 0.5rem 0;
-    font-style: italic;
-  }
+    .slogan {
+        font-size: 1.25rem;
+        font-style: italic;
+        opacity: 0.8;
+    }
+}
 
-  .nav {
-    list-style: none;
+// Hero Section
+.hero-section {
+    position: relative;
+    background-color: #00264d;
+    color: $light-text-color;
+    padding: $spacing-unit * 2 0;
+    text-align: center;
+
+    .hero-image-container {
+        max-height: 400px;
+        overflow: hidden;
+        margin-bottom: $spacing-unit;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+}
+
+// General Section Styling
+section {
+    padding: $spacing-unit * 1.5 0;
+    text-align: center;
+}
+
+section:nth-of-type(odd) {
+    background-color: $secondary-color;
+}
+
+section:nth-of-type(even) {
+    background-color: lighten($primary-color, 65%);
+}
+
+// Lists & Buttons
+ul, ol {
+    list-style-position: inside;
+    list-style-type: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    gap: 1rem;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 
-    li a {
-      color: $light-color;
-      text-decoration: none;
-
-      &:hover {
-        text-decoration: underline;
-      }
+    li {
+        background-color: $light-text-color;
+        border-radius: 8px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 300px;
+        text-align: left;
     }
-  }
 }
 
-.hero {
-  text-align: center;
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  h2 {
-    margin: 1rem 0;
-  }
-}
-
-section {
-  padding: 2rem;
-  text-align: center;
-}
-
-.services ul {
-  list-style: none;
-  padding: 0;
-  li {
-    margin: 0.5rem 0;
-  }
-}
-
-.process {
-  .cta {
-    background: $primary-color;
-    color: $light-color;
-    border: none;
-    padding: 0.8rem 1.5rem;
+.cta-button {
+    display: inline-block;
+    background-color: $accent-color;
+    color: $light-text-color;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
     border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+    margin-top: 1.5rem;
 
     &:hover {
-      background: darken($primary-color, 10%);
+        background-color: darken($accent-color, 10%);
     }
-  }
 }
 
-// FAQ
-.faq {
-  .faq-item {
+// FAQ Section
+.faq-item {
+    background-color: $light-text-color;
     margin-bottom: 1rem;
-
-    .faq-answer {
-      display: none;
-      margin-top: 0.5rem;
-      color: $secondary-color;
-    }
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
     .faq-question {
-      cursor: pointer;
-      color: $primary-color;
+        padding: 1rem;
+        background-color: lighten($primary-color, 60%);
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: lighten($primary-color, 55%);
+        }
     }
-  }
+
+    .faq-answer {
+        padding: 0 1rem;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    }
+
+    &.open {
+        .faq-answer {
+            max-height: 200px; // A value large enough to accommodate the content
+            padding: 1rem;
+        }
+    }
 }
 
 // Footer
-.footer {
-  background: $secondary-color;
-  color: $light-color;
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
+footer {
+    background-color: $primary-color;
+    color: $light-text-color;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+    
+    p {
+        margin: 0.5rem 0;
+    }
 }
 
-// Responsiveness
+// Media Queries for Responsiveness
 @media (max-width: 768px) {
-  header .nav {
-    flex-direction: column;
-  }
+    h1 {
+        font-size: 2.5rem;
+    }
+    
+    .slogan {
+        font-size: 1rem;
+    }
 
-  section {
-    padding: 1rem;
-  }
+    ul, ol {
+        flex-direction: column;
+    }
+
+    .hero-image-container {
+        height: auto;
+    }
 }
