@@ -1,15 +1,23 @@
 /* Compiled from styles.scss */
+/* Add your compiled CSS here after running a SCSS compiler. */
+/* Example: */
+/*
+// Global Styles & Typography
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: #0c0e14;
+  color: #a0a0a0;
   line-height: 1.6;
-  background-color: #f0f0f5;
-  color: #333;
 }
 
 .container {
@@ -18,139 +26,141 @@ body {
   padding: 0 1rem;
 }
 
-h1, h2, h3 {
-  margin-bottom: 0.5em;
-  font-weight: 700;
+h1, h2, h3, h4 {
+  color: #e0e0e0;
+  font-weight: 600;
 }
 
+// Header and Hero Section
 header {
-  background-color: #004c99;
-  color: #fff;
+  background-color: #0c0e14;
   padding: 2rem 0;
   text-align: center;
 }
-header .slogan {
-  font-size: 1.25rem;
+header h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+header p.slogan {
+  font-size: 1.2rem;
   font-style: italic;
-  opacity: 0.8;
+  margin-top: 0.5rem;
 }
 
 .hero-section {
-  position: relative;
-  background-color: #00264d;
-  color: #fff;
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
+  background-image: linear-gradient(135deg, #0c0e14, #1a1a23);
 }
-.hero-section .hero-image-container {
-  max-height: 400px;
-  overflow: hidden;
-  margin-bottom: 2rem;
+.hero-section .hero-content {
+  max-width: 800px;
+  margin: 0 auto;
 }
-.hero-section .hero-image {
-  width: 100%;
-  height: auto;
-  display: block;
+.hero-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
+// Feature and Process Sections (Cards)
 section {
-  padding: 3rem 0;
-  text-align: center;
+  padding: 4rem 0;
 }
-
-section:nth-of-type(odd) {
-  background-color: #f0f0f5;
+section.features-section, section.process-section {
+  background-color: #0c0e14;
 }
-
-section:nth-of-type(even) {
-  background-color: #99c2e6;
-}
-
-ul, ol {
-  list-style-position: inside;
-  list-style-type: none;
+section ul, section ol {
+  list-style: none;
   padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
-ul li, ol li {
-  background-color: #fff;
-  border-radius: 8px;
-  padding: 1.5rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 300px;
+section ul li, section ol li {
+  background-color: #1a1a23;
+  border: 1px solid #2a2a35;
+  border-radius: 12px;
+  padding: 2rem;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+section ul li:hover, section ol li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+// Call to Action Button
 .cta-button {
   display: inline-block;
-  background-color: #4CAF50;
+  background-image: linear-gradient(45deg, #7d4dff, #472b9a);
   color: #fff;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 2.5rem;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-size: 1.1rem;
-  transition: background-color 0.3s ease;
-  margin-top: 1.5rem;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .cta-button:hover {
-  background-color: #3f9942;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(125, 77, 255, 0.4);
 }
 
+// FAQ Section
 .faq-item {
-  background-color: #fff;
+  background-color: #1a1a23;
+  border: 1px solid #2a2a35;
+  border-radius: 12px;
   margin-bottom: 1rem;
-  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.faq-item .faq-question {
-  padding: 1rem;
-  background-color: #99c2e6;
+.faq-item h3 {
+  padding: 1.5rem;
   cursor: pointer;
-  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   transition: background-color 0.3s ease;
 }
-.faq-item .faq-question:hover {
-  background-color: #85b8e1;
+.faq-item h3:hover {
+  background-color: #21212b;
 }
-.faq-item .faq-answer {
-  padding: 0 1rem;
+.faq-item .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+  padding: 0 1.5rem;
+  transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
 }
-.faq-item.open .faq-answer {
+.faq-item.open .answer {
   max-height: 200px;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
+// Footer
 footer {
-  background-color: #004c99;
-  color: #fff;
+  background-color: #1a1a23;
+  color: #a0a0a0;
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 2rem 0;
   font-size: 0.9rem;
+  margin-top: 2rem;
 }
-footer p {
-  margin: 0.5rem 0;
+footer .contact-details {
+  margin-top: 0.5rem;
 }
 
+// Media Queries for Responsiveness
 @media (max-width: 768px) {
-  h1 {
+  header h1 {
     font-size: 2.5rem;
   }
-  .slogan {
+  .hero-section {
+    padding: 2rem 0;
+  }
+  .cta-button {
+    padding: 0.75rem 2rem;
     font-size: 1rem;
   }
-  ul, ol {
-    flex-direction: column;
-  }
-  .hero-image-container {
-    height: auto;
-  }
 }
+*/
