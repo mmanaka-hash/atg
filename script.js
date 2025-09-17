@@ -1,12 +1,18 @@
-// FAQ Toggle
-const questions = document.querySelectorAll(".faq-question");
+document.addEventListener('DOMContentLoaded', () => {
 
-questions.forEach(q => {
-  q.addEventListener("click", () => {
-    const answer = q.nextElementSibling;
-    answer.style.display = answer.style.display === "block" ? "none" : "block";
-  });
+    // FAQ Toggle Feature
+    const faqQuestions = document.querySelectorAll('.faq-question');
+
+    faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+            const faqItem = question.parentElement;
+            faqItem.classList.toggle('open');
+        });
+    });
+
+    // Set Current Year in Footer
+    const currentYearSpan = document.getElementById('current-year');
+    const currentYear = new Date().getFullYear();
+    currentYearSpan.textContent = currentYear;
+    
 });
-
-// Auto-update footer year
-document.getElementById("year").textContent = new Date().getFullYear();
