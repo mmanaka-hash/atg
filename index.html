@@ -10,11 +10,13 @@
             theme: {
                 extend: {
                     colors: {
-                        lightBg: '#f5f7fa',
-                        cardBg: '#ffffff',
-                        primary: '#007bff',
-                        textDark: '#333333',
-                        textGray: '#5c636a',
+                        darkBg: '#0a0a1a',
+                        cardBg: '#111122',
+                        primary: '#00eaff',
+                        secondary: '#8a2be2',
+                        textLight: '#e0e0e0',
+                        textGray: '#a0a0a0',
+                        borderDark: '#2c2c4a',
                     }
                 }
             }
@@ -24,19 +26,35 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f7fa;
-            color: #333333;
+            background-color: #0a0a1a;
+            color: #e0e0e0;
             line-height: 1.6;
+        }
+        /* Subtle background noise texture for a tech feel */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iLjY1IiBudW1PY3RhdmVlcz0iMiIgc3RpdGNoVGlsZXM9InN0aXRjaCIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbHRlcj0idXJsKCNuKSIgb3BhY2l0eT0iLjA1Ii8+PC9zdmc+');
+            pointer-events: none;
+            z-index: -1;
         }
         /* Custom gradient for the hero text */
         .gradient-text {
-            background-image: linear-gradient(to right, #000000, #007bff);
+            background-image: linear-gradient(to right, #00eaff, #8a2be2);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         /* Custom hover glow effect for cards */
+        .card-hover {
+            box-shadow: 0 0 15px rgba(0, 234, 255, 0.1);
+            transition: all 0.3s ease;
+        }
         .card-hover:hover {
-            box-shadow: 0 0 20px rgba(0, 123, 255, 0.2);
+            box-shadow: 0 0 20px rgba(0, 234, 255, 0.4), 0 0 30px rgba(138, 43, 226, 0.2);
             transform: translateY(-5px);
         }
         /* CSS for the infinite logo slider animation */
@@ -57,168 +75,168 @@
         }
     </style>
 </head>
-<body class="bg-lightBg text-textDark">
+<body class="bg-darkBg text-textLight">
 
     <header class="p-6 bg-cardBg">
         <nav class="flex justify-between items-center max-w-7xl mx-auto">
-            <div class="text-textDark text-2xl font-bold">E-Tech Solutions</div>
-            <ul class="hidden md:flex space-x-6 text-sm text-textDark">
-                <li><a href="index.html" class="hover:text-primary transition-colors">Home</a></li>
-                <li><a href="about.html" class="hover:text-primary transition-colors">About Us</a></li>
-                <li><a href="index.html#features" class="hover:text-primary transition-colors">Services</a></li>
-                <li><a href="index.html#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
-                <li><a href="index.html#contact" class="hover:text-primary transition-colors">Contact</a></li>
+            <div class="text-textLight text-2xl font-bold">E-Tech Solutions</div>
+            <ul class="hidden md:flex space-x-6 text-sm text-textLight">
+                <li><a href="#hero" class="hover:text-primary transition-colors">Home</a></li>
+                <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+                <li><a href="#features" class="hover:text-primary transition-colors">Services</a></li>
+                <li><a href="#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
+                <li><a href="#faq" class="hover:text-primary transition-colors">FAQ</a></li>
                 <li><a href="#" class="hover:text-primary transition-colors">Sign in</a></li>
             </ul>
         </nav>
-        <div id="home" class="flex flex-col items-center text-center py-20 px-4">
+        <div id="hero" class="flex flex-col items-center text-center py-20 px-4">
             <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 gradient-text">Innovating Tomorrow, Today.</h1>
             <p class="max-w-xl text-lg text-textGray mb-8">We are dedicated to providing cutting-edge technology solutions that drive business growth and efficiency.</p>
             <div class="flex space-x-4">
-                <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-blue-600 transition-colors">Get a Free Quote</button>
-                <button id="downloadBrochure" class="bg-gray-200 text-textDark font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-300 transition-colors">Download Brochure</button>
+                <button class="bg-primary text-textLight font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-secondary transition-colors">Get a Free Quote</button>
+                <button id="downloadBrochure" class="bg-cardBg text-textLight font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-secondary transition-colors border border-borderDark">Download Brochure</button>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-4">
         <section class="py-16 overflow-hidden">
-            <h2 class="text-xl text-textDark font-bold text-center mb-12 uppercase tracking-widest">Trusted by leading brands</h2>
+            <h2 class="text-xl text-textLight font-bold text-center mb-12 uppercase tracking-widest">Trusted by leading brands</h2>
             <div class="flex items-center gap-12 logo-slider">
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
-                    <svg class="h-8 text-textDark hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                    <svg class="h-8 text-textLight hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
                 </div>
             </div>
         </section>
         
         <section id="about" class="py-16">
             <div class="max-w-xl mx-auto text-center">
-                <h2 class="text-4xl text-textDark font-bold mb-4">About E-Tech Solutions</h2>
+                <h2 class="text-4xl text-textLight font-bold mb-4">About E-Tech Solutions</h2>
                 <p>At E-Tech Solutions, our mission is to empower businesses through transformative technology. We specialize in creating custom, scalable solutions that address the unique challenges of a rapidly evolving digital landscape. Our team of experts is passionate about innovation and committed to delivering excellence.</p>
             </div>
         </section>
 
         <section id="features" class="py-16">
-            <h2 class="text-4xl text-textDark font-bold text-center mb-12">Our Core Services</h2>
+            <h2 class="text-4xl text-textLight font-bold text-center mb-12">Our Core Services</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Digital Transformation Strategy</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Digital Transformation Strategy</h3>
                     <p>We help you align your business goals with a clear technology roadmap.</p>
                 </div>
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Cloud & Infrastructure Solutions</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Cloud & Infrastructure Solutions</h3>
                     <p>Our experts design and implement scalable cloud environments to boost your efficiency.</p>
                 </div>
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Data & AI Innovation</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Data & AI Innovation</h3>
                     <p>Unlock valuable insights and automate processes with our advanced data and artificial intelligence services.</p>
                 </div>
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Cybersecurity & Compliance</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Cybersecurity & Compliance</h3>
                     <p>Protect your assets and ensure regulatory adherence with our comprehensive security protocols.</p>
                 </div>
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Custom Application Development</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Custom Application Development</h3>
                     <p>We build bespoke software and mobile applications tailored to your unique business needs.</p>
                 </div>
-                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-borderDark card-hover transition-all">
                     <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
-                    <h3 class="text-textDark text-xl font-semibold mb-2">Managed IT Services & Support</h3>
+                    <h3 class="text-textLight text-xl font-semibold mb-2">Managed IT Services & Support</h3>
                     <p>Rely on our team for proactive management and round-the-clock support for your IT infrastructure.</p>
                 </div>
             </div>
         </section>
 
-        <section class="py-16 bg-gray-100">
-            <h2 class="text-4xl text-textDark font-bold text-center mb-12">Our 3-Step Approach</h2>
+        <section id="pricing" class="py-16 bg-darkBg">
+            <h2 class="text-4xl text-textLight font-bold text-center mb-12">Our 3-Step Approach</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center card-hover transition-all">
-                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">1</div>
-                    <h3 class="text-textDark font-semibold mb-2">Consultation</h3>
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-textLight text-3xl font-bold">1</div>
+                    <h3 class="text-textLight font-semibold mb-2">Consultation</h3>
                     <p>We begin with a detailed discussion to understand your unique needs and challenges.</p>
                 </div>
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center card-hover transition-all">
-                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">2</div>
-                    <h3 class="text-textDark font-semibold mb-2">Development</h3>
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-textLight text-3xl font-bold">2</div>
+                    <h3 class="text-textLight font-semibold mb-2">Development</h3>
                     <p>Our team crafts a custom solution tailored to your business goals.</p>
                 </div>
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 text-center card-hover transition-all">
-                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-white text-3xl font-bold">3</div>
-                    <h3 class="text-textDark font-semibold mb-2">Deployment & Support</h3>
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4 flex items-center justify-center text-textLight text-3xl font-bold">3</div>
+                    <h3 class="text-textLight font-semibold mb-2">Deployment & Support</h3>
                     <p>We seamlessly deploy the solution and provide ongoing support to ensure its success.</p>
                 </div>
             </div>
         </section>
 
-        <section id="testimonials" class="py-16">
-            <h2 class="text-4xl text-textDark font-bold text-center mb-12">TESTIMONIALS</h2>
+        <section id="contact" class="py-16">
+            <h2 class="text-4xl text-textLight font-bold text-center mb-12">TESTIMONIALS</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark card-hover transition-all">
                     <p class="italic text-lg mb-4 text-textGray">"This tool is absolutely amazing! It has saved me countless hours and has dramatically improved the quality of my website copy."</p>
-                    <p class="font-bold text-textDark">- Jane Doe</p>
+                    <p class="font-bold text-textLight">- Jane Doe</p>
                 </div>
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark card-hover transition-all">
                     <p class="italic text-lg mb-4 text-textGray">"Saved me so much time. I was able to generate high-quality content for my entire site in just a few clicks."</p>
-                    <p class="font-bold text-textDark">- John Smith</p>
+                    <p class="font-bold text-textLight">- John Smith</p>
                 </div>
-                <div class="bg-cardBg p-8 rounded-xl border border-gray-200 card-hover transition-all">
+                <div class="bg-cardBg p-8 rounded-xl border border-borderDark card-hover transition-all">
                     <p class="italic text-lg mb-4 text-textGray">"Highly recommend this tool to any designer looking to quickly fill their mockups with meaningful content."</p>
-                    <p class="font-bold text-textDark">- Emily White</p>
+                    <p class="font-bold text-textLight">- Emily White</p>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="py-16 bg-gray-100">
-            <h2 class="text-4xl text-textDark font-bold text-center mb-12">FREQUENTLY ASKED QUESTIONS</h2>
+        <section id="faq" class="py-16 bg-darkBg">
+            <h2 class="text-4xl text-textLight font-bold text-center mb-12">FREQUENTLY ASKED QUESTIONS</h2>
             <div class="max-w-3xl mx-auto">
-                <div class="border-b border-gray-200 py-4 faq-item">
-                    <h3 class="text-textDark font-semibold text-lg cursor-pointer flex justify-between items-center">
+                <div class="border-b border-borderDark py-4 faq-item">
+                    <h3 class="text-textLight font-semibold text-lg cursor-pointer flex justify-between items-center">
                         Question 1 about the service?
                         <span class="text-xl toggle-icon">+</span>
                     </h3>
                     <p class="mt-2 text-sm text-textGray hidden answer">Answer to the first question goes here. This section can be toggled to show or hide the answer.</p>
                 </div>
-                <div class="border-b border-gray-200 py-4 faq-item">
-                    <h3 class="text-textDark font-semibold text-lg cursor-pointer flex justify-between items-center">
+                <div class="border-b border-borderDark py-4 faq-item">
+                    <h3 class="text-textLight font-semibold text-lg cursor-pointer flex justify-between items-center">
                         Question 2 about the service?
                         <span class="text-xl toggle-icon">+</span>
                     </h3>
                     <p class="mt-2 text-sm text-textGray hidden answer">Answer to the second question goes here. This section can be toggled to show or hide the answer.</p>
                 </div>
-                <div class="border-b border-gray-200 py-4 faq-item">
-                    <h3 class="text-textDark font-semibold text-lg cursor-pointer flex justify-between items-center">
+                <div class="border-b border-borderDark py-4 faq-item">
+                    <h3 class="text-textLight font-semibold text-lg cursor-pointer flex justify-between items-center">
                         Question 3 about the service?
                         <span class="text-xl toggle-icon">+</span>
                     </h3>
@@ -231,26 +249,26 @@
     <footer class="bg-cardBg py-16 px-4">
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-                <div class="text-textDark text-2xl font-bold mb-4">E-Tech Solutions</div>
+                <div class="text-textLight text-2xl font-bold mb-4">E-Tech Solutions</div>
                 <p class="text-textGray">Innovating Tomorrow, Today. All rights reserved. &copy; <span id="current-year"></span></p>
                 <p class="text-textGray">Contact: info@etech.com</p>
             </div>
             <div>
-                <h4 class="text-textDark font-semibold mb-4">Menu</h4>
+                <h4 class="text-textLight font-semibold mb-4">Menu</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
                     <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-textDark font-semibold mb-4">Company</h4>
+                <h4 class="text-textLight font-semibold mb-4">Company</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
                     <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
                 </ul>
             </div>
             <div>
-                <h4 class="text-textDark font-semibold mb-4">Legal</h4>
+                <h4 class="text-textLight font-semibold mb-4">Legal</h4>
                 <ul class="space-y-2">
                     <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
                     <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
@@ -261,7 +279,7 @@
     
     <div id="brochureModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
         <div class="bg-cardBg p-8 rounded-lg text-center shadow-lg w-80">
-            <h4 class="text-textDark font-bold text-2xl mb-4">Download Successful!</h4>
+            <h4 class="text-textLight font-bold text-2xl mb-4">Download Successful!</h4>
             <p class="text-textGray">Your brochure is ready. Thank you for your interest!</p>
         </div>
     </div>
