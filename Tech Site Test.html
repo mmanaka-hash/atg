@@ -1,0 +1,374 @@
+}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Copy Tool</title>
+    <!-- Load Tailwind CSS from CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Customizing Tailwind colors to match the design -->
+    <script>
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0c0e14',
+        tailwind.config = {
+                        cardBg: '#1a1a23',
+                        primary: '#7d4dff',
+                        textGray: '#a0a0a0',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Poppins Font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0c0e14;
+            color: #a0a0a0;
+            line-height: 1.6;
+        }
+        /* Custom gradient for the hero text */
+        .gradient-text {
+            background-image: linear-gradient(to right, #ffffff, #7d4dff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Custom hover glow effect for cards */
+        .card-hover:hover {
+            box-shadow: 0 0 20px rgba(125, 77, 255, 0.5);
+            transform: translateY(-5px);
+        }
+        /* CSS for the infinite logo slider animation */
+        @keyframes slide {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+        .logo-slider {
+            white-space: nowrap;
+            animation: slide 30s linear infinite;
+        }
+        .logo-slider:hover {
+            animation-play-state: paused;
+        }
+    </style>
+</head>html {
+	width: 100%;
+	height: 100%;
+	background: url("Enter your image URL") center center no-repeat;
+}html {
+	width: 100%;
+	height: 100%;
+	background: url("Enter your image URL") center center no-repeat;
+}
+<body class="bg-darkBg text-textGray">
+
+    <header class="p-6">
+      <nav class="flex justify-between items-center max-w-7xl mx-auto">
+        <div class="text-white text-2xl font-bold">Logo</div>
+        <ul class="hidden md:flex space-x-6 text-sm">
+          <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
+          <li><a href="#features" class="hover:text-primary transition-colors">Services</a></li>
+          <li><a href="#pricing" class="hover:text-primary transition-colors">Pricing</a></li>
+          <li><a href="#about" class="hover:text-primary transition-colors">About Us</a></li>
+          <li><a href="#contact" class="hover:text-primary transition-colors">Contact</a></li>
+          <li><a href="#" class="hover:text-primary transition-colors">Sign in</a></li>
+        </ul>
+      </nav>
+      <div id="home" class="flex flex-col items-center text-center py-20 px-4">
+        <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 gradient-text"> THE FASTEST WAY TO WRITE COPY FOR YOUR WEBSITE </h1>
+        <p class="max-w-xl text-lg text-gray-400 mb-8"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <div class="flex space-x-4">
+          <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-purple-600 transition-colors"> Start your free trial </button>
+          <button id="downloadBrochure" class="bg-gray-700 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-gray-600 transition-colors"> Download Brochure </button>
+        </div>
+      </div>
+    </header>
+<main class="max-w-7xl mx-auto px-4">
+    <!-- Logo Slider Section -->
+    <section class="py-16 overflow-hidden">
+            <h2 class="text-xl text-white font-bold text-center mb-12 uppercase tracking-widest">Trusted by leading brands</h2>
+            <div class="flex items-center gap-12 logo-slider">
+                <!-- Logos are duplicated to create the infinite scroll effect -->
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                <!-- Duplicate logos for the seamless loop -->
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+                 <div class="flex-shrink-0 flex items-center justify-center w-40 h-16">
+                    <svg class="h-8 text-white hover:text-primary transition-colors" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-8h2v8zm4 0h-2v-8h2v8zm4 0h-2v-8h2v8zm-8 4h-4v-2h4v2zm4 0h-4v-2h4v2zm4 0h-4v-2h4v2z"/></svg>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Features Section -->
+        <section id="features" class="py-16">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-[#2a2a35]">
+                    <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Feature 1</h3>
+                    <p>Brief description of a key feature or benefit of the service.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-[#2a2a35]">
+                    <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Feature 2</h3>
+                    <p>Brief description of a key feature or benefit of the service.</p>
+                </div>
+                <div class="flex flex-col items-center text-center p-6 bg-cardBg rounded-xl border border-[#2a2a35]">
+                    <div class="h-12 w-12 bg-primary rounded-full mb-4"></div>
+                    <h3 class="text-white text-xl font-semibold mb-2">Feature 3</h3>
+                    <p>Brief description of a key feature or benefit of the service.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Copywriting Tool Section -->
+        <section class="py-16">
+            <h2 class="text-4xl text-white font-bold text-center mb-12">AN AI COPYWRITING TOOL MADE FOR DESIGNERS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Grid Item 1 -->
+                <div class="bg-cardBg p-6 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <h4 class="text-white font-semibold text-lg mb-2">Content Block Title</h4>
+                    <p class="text-sm mb-4">Some descriptive text here about the content block.</p>
+                    <div class="h-32 bg-[#2a2a35] rounded-lg"></div>
+                </div>
+                <!-- Grid Item 2 -->
+                <div class="bg-cardBg p-6 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <h4 class="text-white font-semibold text-lg mb-2">Content Block Title</h4>
+                    <p class="text-sm mb-4">Some descriptive text here about the content block.</p>
+                    <div class="h-32 bg-[#2a2a35] rounded-lg"></div>
+                </div>
+                <!-- Grid Item 3 -->
+                <div class="bg-cardBg p-6 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <h4 class="text-white font-semibold text-lg mb-2">Content Block Title</h4>
+                    <p class="text-sm mb-4">Some descriptive text here about the content block.</p>
+                    <div class="h-32 bg-[#2a2a35] rounded-lg"></div>
+                </div>
+                <!-- Grid Item 4 -->
+                <div class="bg-cardBg p-6 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <h4 class="text-white font-semibold text-lg mb-2">Content Block Title</h4>
+                    <p class="text-sm mb-4">Some descriptive text here about the content block.</p>
+                    <div class="h-32 bg-[#2a2a35] rounded-lg"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hassle Section -->
+        <section id="about" class="py-16">
+            <h2 class="text-4xl text-white font-bold text-center mb-12">SAY GOODBYE TO THE HASSLE OF MAKING WORDS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4"></div>
+                    <p class="text-white font-semibold">Description text for this item.</p>
+                </div>
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4"></div>
+                    <p class="text-white font-semibold">Description text for this item.</p>
+                </div>
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] text-center card-hover transition-all">
+                    <div class="h-16 w-16 bg-primary rounded-full mx-auto mb-4"></div>
+                    <p class="text-white font-semibold">Description text for this item.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-16">
+            <h2 class="text-4xl text-white font-bold text-center mb-12">PAY ONLY FOR WHAT YOU NEED</h2>
+            <div class="flex flex-wrap justify-center gap-8">
+                <!-- Basic Card -->
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] text-center w-80 card-hover transition-all">
+                    <h3 class="text-white text-2xl font-bold mb-4">Basic</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">$9<span class="text-lg text-textGray">/month</span></p>
+                    <ul class="text-left mb-8">
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 1</li>
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 2</li>
+                        <li class="py-2">Feature 3</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-purple-600 transition-colors">Select</button>
+                </div>
+                <!-- Pro Card -->
+                <div class="bg-cardBg p-8 rounded-xl border border-primary text-center w-80 shadow-lg shadow-primary/50 card-hover transition-all">
+                    <h3 class="text-white text-2xl font-bold mb-4">Pro</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">$19<span class="text-lg text-textGray">/month</span></p>
+                    <ul class="text-left mb-8">
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 1</li>
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 2</li>
+                        <li class="py-2">Feature 3</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-purple-600 transition-colors">Select</button>
+                </div>
+                <!-- Enterprise Card -->
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] text-center w-80 card-hover transition-all">
+                    <h3 class="text-white text-2xl font-bold mb-4">Enterprise</h3>
+                    <p class="text-primary text-5xl font-bold mb-4">Contact Us</p>
+                    <ul class="text-left mb-8">
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 1</li>
+                        <li class="py-2 border-b border-[#2a2a35]">Feature 2</li>
+                        <li class="py-2">Feature 3</li>
+                    </ul>
+                    <button class="bg-primary text-white font-semibold py-3 px-8 rounded-full w-full hover:bg-purple-600 transition-colors">Select</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-16">
+            <h2 class="text-4xl text-white font-bold text-center mb-12">TESTIMONIALS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <p class="italic text-lg mb-4">"This tool is absolutely amazing! It has saved me countless hours and has dramatically improved the quality of my website copy."</p>
+                    <p class="font-bold text-white">- Jane Doe</p>
+                </div>
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <p class="italic text-lg mb-4">"Saved me so much time. I was able to generate high-quality content for my entire site in just a few clicks."</p>
+                    <p class="font-bold text-white">- John Smith</p>
+                </div>
+                <div class="bg-cardBg p-8 rounded-xl border border-[#2a2a35] card-hover transition-all">
+                    <p class="italic text-lg mb-4">"Highly recommend this tool to any designer looking to quickly fill their mockups with meaningful content."</p>
+                    <p class="font-bold text-white">- Emily White</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="contact" class="py-16">
+            <h2 class="text-4xl text-white font-bold text-center mb-12">FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="border-b border-[#2a2a35] py-4 faq-item">
+                    <h3 class="text-white font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        Question 1 about the service?
+                        <span class="text-xl toggle-icon">+</span>
+                    </h3>
+                    <p class="mt-2 text-sm hidden answer">Answer to the first question goes here. This section can be toggled to show or hide the answer.</p>
+                </div>
+                <div class="border-b border-[#2a2a35] py-4 faq-item">
+                    <h3 class="text-white font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        Question 2 about the service?
+                        <span class="text-xl toggle-icon">+</span>
+                    </h3>
+                    <p class="mt-2 text-sm hidden answer">Answer to the second question goes here. This section can be toggled to show or hide the answer.</p>
+                </div>
+                <div class="border-b border-[#2a2a35] py-4 faq-item">
+                    <h3 class="text-white font-semibold text-lg cursor-pointer flex justify-between items-center">
+                        Question 3 about the service?
+                        <span class="text-xl toggle-icon">+</span>
+                    </h3>
+                    <p class="mt-2 text-sm hidden answer">Answer to the third question goes here. This section can be toggled to show or hide the answer.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-[#111118] py-16 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <div class="text-white text-2xl font-bold mb-4">Logo</div>
+                <p>Some footer text about the company and its mission. All rights reserved.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Menu</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Company</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-semibold mb-4">Legal</h4>
+                <ul class="space-y-2">
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 1</a></li>
+                    <li><a href="#" class="hover:text-primary transition-colors">Link 2</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modal for Brochure Download -->
+    <div id="brochureModal" class="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 flex items-center justify-center hidden z-50">
+        <div class="bg-cardBg p-8 rounded-lg text-center shadow-lg w-80">
+            <h4 class="text-white font-bold text-2xl mb-4">Download Successful!</h4>
+            <p>Your brochure is ready. Thank you for your interest!</p>
+        </div>
+    </div>
+
+    <!-- JavaScript for FAQ toggle and Smooth Scrolling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // FAQ Toggle
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const header = item.querySelector('h3');
+                const answer = item.querySelector('.answer');
+                const toggleIcon = item.querySelector('.toggle-icon');
+
+                header.addEventListener('click', () => {
+                    answer.classList.toggle('hidden');
+                    if (answer.classList.contains('hidden')) {
+                        toggleIcon.textContent = '+';
+                    } else {
+                        toggleIcon.textContent = '-';
+                    }
+                });
+            });
+
+            // Smooth Scrolling
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Brochure Download Button with Modal
+            const downloadBtn = document.getElementById('downloadBrochure');
+            const modal = document.getElementById('brochureModal');
+            downloadBtn.addEventListener('click', () => {
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                }, 3000); // Hide modal after 3 seconds
+            });
+        });
+    </script>
+</body>
+</html>
