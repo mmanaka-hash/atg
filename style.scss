@@ -1,23 +1,28 @@
-// SCSS Variables
-$primary-color: #004c99; // Deep tech blue
-$secondary-color: #f0f0f5; // Off-white for backgrounds
-$accent-color: #4CAF50; // A vibrant green for accents
-$text-color: #333;
-$light-text-color: #fff;
+// SCSS Variables for a modern, sleek look
+$dark-bg: #0c0e14;
+$card-bg: #1a1a23;
+$primary-color: #7d4dff;
+$text-gray: #a0a0a0;
+$white-text: #e0e0e0;
 $spacing-unit: 2rem;
+$border-color: #2a2a35;
 
-// Basic Reset & Typography
+// Global Styles & Typography
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    background-color: $dark-bg;
+    color: $text-gray;
     line-height: 1.6;
-    background-color: $secondary-color;
-    color: $text-color;
 }
 
 .container {
@@ -26,161 +31,159 @@ body {
     padding: 0 1rem;
 }
 
-h1, h2, h3 {
-    margin-bottom: 0.5em;
-    font-weight: 700;
+h1, h2, h3, h4 {
+    color: $white-text;
+    font-weight: 600;
 }
 
-// Header
+// Header and Hero Section
 header {
-    background-color: $primary-color;
-    color: $light-text-color;
+    background-color: $dark-bg;
     padding: $spacing-unit 0;
     text-align: center;
+    
+    h1 {
+        font-size: 3.5rem;
+        font-weight: 700;
+    }
 
-    .slogan {
-        font-size: 1.25rem;
+    p.slogan {
+        font-size: 1.2rem;
         font-style: italic;
-        opacity: 0.8;
+        margin-top: 0.5rem;
     }
 }
 
-// Hero Section
 .hero-section {
-    position: relative;
-    background-color: #00264d;
-    color: $light-text-color;
-    padding: $spacing-unit * 2 0;
+    padding: $spacing-unit * 3 0;
     text-align: center;
-
-    .hero-image-container {
-        max-height: 400px;
-        overflow: hidden;
-        margin-bottom: $spacing-unit;
+    background-image: linear-gradient(135deg, $dark-bg, #1a1a23);
+    
+    .hero-content {
+        max-width: 800px;
+        margin: 0 auto;
     }
-
-    .hero-image {
-        width: 100%;
-        height: auto;
-        display: block;
+    
+    h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 }
 
-// General Section Styling
+// Feature and Process Sections (Cards)
 section {
-    padding: $spacing-unit * 1.5 0;
-    text-align: center;
-}
+    padding: $spacing-unit * 2 0;
 
-section:nth-of-type(odd) {
-    background-color: $secondary-color;
-}
+    &.features-section,
+    &.process-section {
+        background-color: $dark-bg;
+    }
 
-section:nth-of-type(even) {
-    background-color: lighten($primary-color, 65%);
-}
+    ul, ol {
+        list-style: none;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: $spacing-unit;
 
-// Lists & Buttons
-ul, ol {
-    list-style-position: inside;
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+        li {
+            background-color: $card-bg;
+            border: 1px solid $border-color;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: left;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
 
-    li {
-        background-color: $light-text-color;
-        border-radius: 8px;
-        padding: 1.5rem;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 100%;
-        max-width: 300px;
-        text-align: left;
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            }
+        }
     }
 }
 
+// Call to Action Button
 .cta-button {
     display: inline-block;
-    background-color: $accent-color;
-    color: $light-text-color;
-    padding: 0.75rem 2rem;
+    background-image: linear-gradient(45deg, $primary-color, darken($primary-color, 15%));
+    color: #fff;
+    padding: 0.75rem 2.5rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
     font-size: 1.1rem;
-    transition: background-color 0.3s ease;
-    margin-top: 1.5rem;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
     &:hover {
-        background-color: darken($accent-color, 10%);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 20px rgba($primary-color, 0.4);
     }
 }
 
 // FAQ Section
 .faq-item {
-    background-color: $light-text-color;
+    background-color: $card-bg;
+    border: 1px solid $border-color;
+    border-radius: 12px;
     margin-bottom: 1rem;
-    border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 
-    .faq-question {
-        padding: 1rem;
-        background-color: lighten($primary-color, 60%);
+    h3 {
+        padding: 1.5rem;
         cursor: pointer;
-        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         transition: background-color 0.3s ease;
-
+        
         &:hover {
-            background-color: lighten($primary-color, 55%);
+            background-color: lighten($card-bg, 5%);
         }
     }
 
-    .faq-answer {
-        padding: 0 1rem;
+    .answer {
         max-height: 0;
         overflow: hidden;
-        transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+        padding: 0 1.5rem;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
     }
 
     &.open {
-        .faq-answer {
-            max-height: 200px; // A value large enough to accommodate the content
-            padding: 1rem;
+        .answer {
+            max-height: 200px;
+            padding: 1.5rem;
         }
     }
 }
 
 // Footer
 footer {
-    background-color: $primary-color;
-    color: $light-text-color;
+    background-color: $card-bg;
+    color: $text-gray;
     text-align: center;
-    padding: 1.5rem 0;
+    padding: 2rem 0;
     font-size: 0.9rem;
-    
-    p {
-        margin: 0.5rem 0;
+    margin-top: 2rem;
+
+    .contact-details {
+        margin-top: 0.5rem;
     }
 }
 
 // Media Queries for Responsiveness
 @media (max-width: 768px) {
-    h1 {
+    header h1 {
         font-size: 2.5rem;
     }
-    
-    .slogan {
+
+    .hero-section {
+        padding: $spacing-unit 0;
+    }
+
+    .cta-button {
+        padding: 0.75rem 2rem;
         font-size: 1rem;
-    }
-
-    ul, ol {
-        flex-direction: column;
-    }
-
-    .hero-image-container {
-        height: auto;
     }
 }
