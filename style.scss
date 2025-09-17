@@ -1,11 +1,11 @@
-// SCSS Variables for a modern, sleek look
-$dark-bg: #0c0e14;
-$card-bg: #1a1a23;
-$primary-color: #7d4dff;
-$text-gray: #a0a0a0;
-$white-text: #e0e0e0;
+// SCSS Variables for a modern, light look
+$light-bg: #f5f7fa;
+$card-bg: #ffffff;
+$primary-color: #007bff;
+$text-dark: #333333;
+$text-gray: #5c636a;
 $spacing-unit: 2rem;
-$border-color: #2a2a35;
+$border-color: #e0e0e0;
 
 // Global Styles & Typography
 * {
@@ -20,8 +20,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: $dark-bg;
-    color: $text-gray;
+    background-color: $light-bg;
+    color: $text-dark;
     line-height: 1.6;
 }
 
@@ -32,13 +32,13 @@ body {
 }
 
 h1, h2, h3, h4 {
-    color: $white-text;
+    color: $text-dark;
     font-weight: 600;
 }
 
 // Header and Hero Section
 header {
-    background-color: $dark-bg;
+    background-color: $card-bg;
     padding: $spacing-unit 0;
     text-align: center;
     
@@ -57,7 +57,7 @@ header {
 .hero-section {
     padding: $spacing-unit * 3 0;
     text-align: center;
-    background-image: linear-gradient(135deg, $dark-bg, #1a1a23);
+    background-image: linear-gradient(135deg, $light-bg, #ffffff);
     
     .hero-content {
         max-width: 800px;
@@ -76,7 +76,7 @@ section {
 
     &.features-section,
     &.process-section {
-        background-color: $dark-bg;
+        background-color: $light-bg;
     }
 
     ul, ol {
@@ -98,7 +98,7 @@ section {
 
             &:hover {
                 transform: translateY(-5px);
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             }
         }
     }
